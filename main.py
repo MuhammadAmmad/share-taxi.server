@@ -7,9 +7,9 @@ from GetLocHandler import GetLocHandler
 from stopDeviceHandler import stopDeviceHandler
 from startDeviceHandler import startDeviceHandler
 # from image_handler import ImageHandler
-#from homepage_handler import HomepageHandler
+from homepage_handler import HomepageHandler
 
-app = webapp2.WSGIApplication([#('/', HomepageHandler),
+app = webapp2.WSGIApplication([('/', HomepageHandler),
                               #('/newDev', NewDeviceHandler),
                               ('/postLocation', PostLocHandler),
                               #('/showLocations',showLocations),

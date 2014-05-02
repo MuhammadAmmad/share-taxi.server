@@ -6,8 +6,6 @@ import webapp2
 # from feed_handler import FeedHandler
 # from model_choosie_post import ChoosiePost
 # from utils import Utils
-from model_device import Device
-from model_device import *
 #from model_device import insDevice()
 #from model_device import searchDevice()
 #from model_gps_location import Location
@@ -35,3 +33,9 @@ class HomepageHandler(webapp2.RequestHandler):
   #   for d in devices:
   #       self.response.write('<b>%s</b>' % d.name)
     #self.response.write('<b>%s</b>' % devices.name)
+
+
+    def get(self):
+      self.response.headers['Content-Type'] = 'text/html'
+      template = jinja_environment.get_template('index.html')
+      self.response.write(template.render())
