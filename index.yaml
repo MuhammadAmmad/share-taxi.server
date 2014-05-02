@@ -2,4 +2,7 @@
 indexes:
 
 - kind: Location
-  ancestor: yes
+  ancestor: no
+  properties:
+  - name: androidID
+  - name: isActive

@@ -40,8 +40,8 @@ class PostLocHandler(webapp2.RequestHandler):
       qry.put()
 
       # doesn't exist (insert):  
-    else:
-      curr_location = Location(longitude = longStr,
-                latitude = latStr, androidID = androidIDStr
-                ,lineNum=lineNumStr,isActive=True)
-      curr_location.put()
+    # else:
+    #   curr_location = Location(longitude = longStr,
+    #             latitude = latStr, androidID = androidIDStr
+    #             ,lineNum=lineNumStr,isActive=True)
+    #   curr_location.put()
