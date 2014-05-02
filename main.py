@@ -1,0 +1,23 @@
+import webapp2
+
+# Handlers
+# from feed_handler import FeedHandler
+from PostLocHandler import PostLocHandler
+from GetLocHandler import GetLocHandler
+from stopDeviceHandler import stopDeviceHandler
+from startDeviceHandler import startDeviceHandler
+# from image_handler import ImageHandler
+#from homepage_handler import HomepageHandler
+
+app = webapp2.WSGIApplication([#('/', HomepageHandler),
+                              #('/newDev', NewDeviceHandler),
+                              ('/postLocation', PostLocHandler),
+                              #('/showLocations',showLocations),
+                              ('/getLocations',GetLocHandler),
+                              ('/stopDevice',stopDeviceHandler),
+                              ('/startDevice',startDeviceHandler)
+                               # ('/blobphoto/([^/]+)?', BlobImageServeHandler),
+                               # ('/votes/new', VoteHandler),
+                               # ('/feed', FeedHandler),
+                               ],
+                              debug=True)
