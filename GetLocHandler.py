@@ -10,8 +10,11 @@ import os
 import json
 from collections import OrderedDict
 
-from google.appengine.ext import ndb
-from model_gps_location import Location
+#from google.appengine.ext import ndb
+from startDeviceHandler import Location
+from startDeviceHandler import startDeviceHandler
+#from startDeviceHandler import curr_location
+from startDeviceHandler import *
 from google.appengine.api import urlfetch
 from Utils import Utils
 
@@ -19,9 +22,11 @@ class GetLocHandler(webapp2.RequestHandler):
 	def get(self):
 		#self.response.headers['Content-Type'] = 'text/html'
 		#return only active points
-		loc_query = Location.query(Location.isActive == True)
-		upd_locations = loc_query.fetch()
-		locations_json = Utils.items_to_json(upd_locations)
+		#loc_query = Location.query(Location.isActive == True)
+		#startDeviceHandler.curr_location
+		upd_locations = startDeviceHandler.curr_location
+		#upd_locations = loc_query.fetch()
+		locations_json = upd_locations.to_json()
 		#for loc in upd_locations:
 		self.response.headers['Content-Type'] = 'text/html'
 			#jsonStr = loc.to_json()
