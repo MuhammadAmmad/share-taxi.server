@@ -62,12 +62,12 @@ class Location(object):
       return result
 
 class startDeviceHandler(webapp2.RequestHandler):
+  global curr_location
   curr_location = Location()
-  #global curr_location
   def post(self):
     #curr_location = Location()
     # get param from url
-    global curr_location
+    #global curr_location
     curr_location.longitude = self.request.get("longitude")
     curr_location.latitude = self.request.get("latitude")
     curr_location.androidID = self.request.get("androidID")

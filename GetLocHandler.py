@@ -11,8 +11,8 @@ import json
 from collections import OrderedDict
 
 #from google.appengine.ext import ndb
-from startDeviceHandler import Location
-from startDeviceHandler import startDeviceHandler
+#from startDeviceHandler import Location
+#from startDeviceHandler import startDeviceHandler
 #from startDeviceHandler import curr_location
 from startDeviceHandler import *
 from google.appengine.api import urlfetch
@@ -24,7 +24,7 @@ class GetLocHandler(webapp2.RequestHandler):
 		#return only active points
 		#loc_query = Location.query(Location.isActive == True)
 		#startDeviceHandler.curr_location
-		upd_locations = startDeviceHandler.curr_location
+		upd_locations = curr_location
 		#upd_locations = loc_query.fetch()
 		locations_json = upd_locations.to_json()
 		#for loc in upd_locations:

@@ -11,6 +11,8 @@ import time
 import datetime
 
 
+
+
 class Location(ndb.Model):
     longitude = ndb.StringProperty(required = True)
     latitude = ndb.StringProperty(required = True)

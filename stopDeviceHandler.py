@@ -19,14 +19,15 @@ from google.appengine.api import urlfetch
  #   loader = jinja2.FileSystemLoader(os.path.dirname(__file__)))
 
 class stopDeviceHandler(webapp2.RequestHandler):
-  def post(self):
+   def post(self):
+    return
     # get param from url
-    androidIDStr = self.request.get("androidID")
-    # check if exist
-    qry= Location.query(Location.androidID == androidIDStr).get()
-    #exist (update):
-    if qry:
-      #qry.longitude = "0.0"
-      #qry.latitude = "0.0"
-      qry.isActive = False
-      qry.put()
+    # androidIDStr = self.request.get("androidID")
+    # # check if exist
+    # qry= Location.query(Location.androidID == androidIDStr).get()
+    # #exist (update):
+    # if qry:
+    #   #qry.longitude = "0.0"
+    #   #qry.latitude = "0.0"
+    #   qry.isActive = False
+    #   qry.put()
