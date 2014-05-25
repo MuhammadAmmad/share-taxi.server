@@ -33,7 +33,7 @@ class Location(object):
     latitude = "32.0590423"
     date = ""
     androidID = "1234"
-    lineNum = "7"
+    lineNum = "4"
     #direction = ndb.StringProperty(required= True,choices=['N','S'])
     isActive = "False"
 
