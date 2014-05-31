@@ -5,15 +5,16 @@ api_version: 1
 threadsafe: true
 
 handlers:
-- url: /images
-  static_dir: images
-
 - url: /.*
   script: main.app
+
+- url: /syncMemNdb
+  script: main.app
+  login: admin
 
 libraries:
 - name: jinja2
   version: latest
 
 builtins:
-  - deferred: on
+- deferred: on

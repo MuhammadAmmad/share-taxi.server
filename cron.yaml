@@ -1,0 +1,4 @@
+cron:
+- description: sync data between memory (cabs_array) and ndb
+  url: /syncMemNdb
+  schedule: every 1 minutes
