@@ -7,6 +7,8 @@ from start_device_handler import startDeviceHandler
 from homepage_handler import HomepageHandler
 from upd_cab_occupation import updCabOccupation
 from sync_mem_ndb import syncMemNdb
+from test1Handler import Test1Handler
+from test2Handler import Test2Handler
 
 app = webapp2.WSGIApplication([('/', HomepageHandler),
                               ('/postLocation', PostLocHandler),
@@ -14,6 +16,8 @@ app = webapp2.WSGIApplication([('/', HomepageHandler),
                               ('/stopDevice',stopDeviceHandler),
                               ('/startDevice',startDeviceHandler),
                               ('/updCabOccupation',updCabOccupation),
-							  ('/syncMemNdb',syncMemNdb)
-                               ],
+                              ('/syncMemNdb',syncMemNdb),
+                              ('/test1', Test1Handler),
+                              ('/test2', Test2Handler)
+                              ],
                               debug=True)
