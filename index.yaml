@@ -1,8 +1,6 @@
 
 indexes:
-
-- kind: Location
-  ancestor: no
-  properties:
-  - name: androidID
-  - name: isActive
+# - kind: ActiveCabs
+#   ancestor: no
+#   properties:
+#   - name: cabs_array_ndb

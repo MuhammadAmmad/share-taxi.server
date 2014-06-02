@@ -1,6 +1,4 @@
-from google.appengine.ext import ndb
-from google.appengine.api import urlfetch
-
+from model_cabs_memory import *
 
 class Utils():
     @staticmethod
@@ -9,5 +7,4 @@ class Utils():
       for item in items:
         arr.append(item.to_json())
       return arr
-
     
