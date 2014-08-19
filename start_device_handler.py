@@ -11,7 +11,6 @@ class startDeviceHandler(webapp2.RequestHandler):
     longitude = self.request.get("longitude")
     latitude = self.request.get("latitude")
 
-    #TODO: maybe we don't need it????
     cab_not_in_array = True
     for cab in cabs_memory_array:
         if (cab.androidID == androidIDStr):

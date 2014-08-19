@@ -35,5 +35,3 @@ class cabObject(object):
       		("freeSeats",self.freeSeats)
       		])
 		return result
-  
-  
