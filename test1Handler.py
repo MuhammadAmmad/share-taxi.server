@@ -52,5 +52,11 @@ class Test1Handler(webapp2.RequestHandler):
         for i in range(len(latlngs)):
             curr_date = datetime.datetime.now()
             temp.update_cab(curr_date, latlngs[i][1],latlngs[i][0])
+            temp.update_freeSeats(i%3) #update free seats
             print('update',i)
             time.sleep(2) # delay 2 seconds
+
+        # delete test cab
+        for cab in cabs_memory_array:
+          if (cab.androidID == '1234'):
+            cabs_memory_array.remove(cab)

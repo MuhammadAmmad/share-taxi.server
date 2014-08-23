@@ -133,4 +133,14 @@ class Test2Handler(webapp2.RequestHandler):
             temp3.update_cab(curr_date, latlngs4[i][1],latlngs4[i][0])
             temp4.update_cab(curr_date, latlngs4[l-1-i][1],latlngs4[l-1-i][0])
             print('update',i)
+            # update free-seats:
+            temp1.update_freeSeats(i%2)
+            temp2.update_freeSeats(i%3)
+            temp3.update_freeSeats((i+1)%2)
+            temp4.update_freeSeats((i+1)%3)
             time.sleep(1) # delay 2 seconds
+
+        # delete test cab
+        for cab in cabs_memory_array:
+          if (cab.androidID == '1234' or cab.androidID == '4567' or cab.androidID == '0000' or cab.androidID == '1111'):
+            cabs_memory_array.remove(cab)
