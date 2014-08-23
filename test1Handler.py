@@ -1,15 +1,4 @@
-import json
 import webapp2
-import cgi
-import urllib
-import urllib2
-import jinja2
-import os
-import sys
-import string
-import traceback
-import time
-import logging
 import datetime
 
 from model_cabs_memory import *
@@ -55,8 +44,3 @@ class Test1Handler(webapp2.RequestHandler):
             temp.update_freeSeats(i%3) #update free seats
             print('update',i)
             time.sleep(2) # delay 2 seconds
-
-        # delete test cab
-        for cab in cabs_memory_array:
-          if (cab.androidID == '1234'):
-            cabs_memory_array.remove(cab)
